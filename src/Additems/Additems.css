@@ -1,0 +1,109 @@
+.additems-container {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.additems-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.category-label {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.category-select {
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.category-select:hover {
+  border-color: black;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: black; /* nice green focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  background-color: #fff;
+}
+
+.additems-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+  resize: vertical; /* user can drag to resize vertically */
+}
+
+
+.additems-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.additems-form label {
+  font-weight: 500;
+  color: #444;
+}
+
+.additems-form input[type="text"],
+.additems-form input[type="number"],
+.additems-form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.additems-form input::placeholder,
+.additems-form textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+
+.additems-preview {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+.additems-button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.additems-button:hover {
+  background-color: #45a049;
+}

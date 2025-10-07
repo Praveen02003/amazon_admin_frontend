@@ -1,0 +1,94 @@
+/* Container */
+.showitems-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow-x: auto; /* for small screens */
+}
+
+/* Table */
+.showitems-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fff;
+}
+
+/* Table Header */
+.showitems-table thead {
+  background: #f5f6fa;
+}
+
+.showitems-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table Rows */
+.showitems-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+  vertical-align: middle;
+}
+
+/* Description column - one line only */
+.showitems-table .description {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Images */
+.showitems-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+.showitems-table button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Delete button */
+.showitems-table button:first-child {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.showitems-table button:first-child:hover {
+  background: #e60000;
+}
+
+/* Update button */
+.showitems-table button:last-child {
+  background: #007bff;
+  color: #fff;
+}
+
+.showitems-table button:last-child:hover {
+  background: #0056b3;
+}
+
+/* Row hover effect */
+.showitems-table tbody tr:hover {
+  background-color: #f9fbfd;
+}

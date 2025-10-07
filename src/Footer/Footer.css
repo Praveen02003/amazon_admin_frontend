@@ -1,0 +1,88 @@
+/* Footer Container */
+.footer {
+  background: linear-gradient(90deg, #131921, #232f3e);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 30px 60px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+  border-top: 2px solid #ff9900;
+  text-align: center;
+}
+
+/* Footer Content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #ff9900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff9900;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: #ff9900;
+  transform: scale(1.05);
+}
+
+/* Copy */
+.footer-copy {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+}

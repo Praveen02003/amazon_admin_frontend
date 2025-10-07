@@ -1,0 +1,120 @@
+/* Container */
+.orders-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* dark text on white */
+  background-color: #f2efef; /* page background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.orders-title {
+  font-size: 2.5rem;           /* big and prominent */
+  color: #000306;              /* blue accent to match cards */
+  text-align: center;          /* center of the page */
+  margin-bottom: 30px;         /* spacing from cards */
+  font-weight: 700;            /* bold */
+  text-transform: uppercase;   /* all caps */
+  letter-spacing: 2px;         /* spaced letters for elegance */
+  transition: transform 0.3s ease;
+}
+
+.orders-title:hover {
+  transform: scale(1.05);      /* subtle zoom on hover */
+}
+
+/* Card for each order */
+.order-card {
+  background: #ffffff; /* white card */
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Order header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-header h2 {
+  font-size: 1.3rem;
+  color: #021122; /* blue email */
+}
+
+.order-header .total {
+  font-size: 1.1rem;
+  background: #e0f0ff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #021122;
+  font-weight: bold;
+}
+
+/* Table styling */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #f0f0f0;
+  color: #021122;
+  text-transform: uppercase;
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.order-table tr:hover {
+  background-color: #e6f2ff;
+}
+
+.order-table img {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.order-table img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-table th, .order-table td {
+    padding: 10px 8px;
+  }
+
+  .order-table img {
+    width: 50px;
+  }
+}

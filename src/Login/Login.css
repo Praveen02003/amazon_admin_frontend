@@ -1,0 +1,88 @@
+/* Full Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f6f9; /* light gray background */
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Login Card */
+.login-box {
+  background: #ffffff; /* pure white */
+  padding: 40px 45px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+/* Heading */
+.login-box h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.login-box label {
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #444;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.15);
+}
+
+/* Button */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  background: linear-gradient(135deg, #0056b3, #0096d6);
+  transform: scale(1.04);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
