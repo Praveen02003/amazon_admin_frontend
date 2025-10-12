@@ -1,65 +1,163 @@
-/* Full page container */
-.home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ===== Main Container ===== */
+.admin-home-container {
+  background: #f4f4f9; /* soft page background */
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  background: linear-gradient(120deg, #f5f7fa, #c3cfe2);
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
+  padding: 40px 100px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-/* Cards wrapper */
-.cards-container {
-  display: flex;
-  gap: 50px; /* space between cards */
-  flex-wrap: wrap;
-  justify-content: center;
+/* ===== Welcome Section ===== */
+.admin-welcome-section {
+  text-align: left;
 }
 
-/* Individual card style */
-.card {
-  background-color: #fff;
-  width: 350px;  /* increased width */
-  height: 250px; /* increased height */
-  border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.admin-welcome-section h1 {
+  font-size: 42px; /* bigger heading */
+  font-weight: 700;
+  color: #111;
+}
+
+.admin-welcome-section p {
+  font-size: 18px; /* bigger subtitle */
+  color: #555;
+  margin-top: 12px;
+}
+
+/* ===== Stats Cards ===== */
+.admin-stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.admin-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
   text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e5;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
-.card h2 {
-  font-size: 26px; /* bigger text */
-  color: #232f3e;
-  margin: 0;
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 153, 0, 0.2);
+  border-color: #ff9900;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  background-color: #f0c14b;
-  color: #000;
+.admin-card h2 {
+  font-size: 18px; /* bigger title */
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 15px;
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 1200px) {
-  .card {
-    width: 300px;
-    height: 220px;
+.admin-card p {
+  font-size: 32px; /* bigger number */
+  font-weight: 700;
+  color: #ff9900;
+}
+
+/* ===== Quick Actions ===== */
+.admin-actions {
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* unique gradient */
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.admin-actions h2 {
+  font-size: 26px; /* bigger section title */
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+  border-bottom: 2px solid #ff9900;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  background: linear-gradient(135deg, #ff9900, #ffb84d);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 18px 28px; /* bigger buttons */
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px; /* bigger text */
+  transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background: linear-gradient(135deg, #e48f00, #ffaf3c);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(255, 153, 0, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .admin-home-container {
+    padding: 40px 50px;
+  }
+
+  .admin-card {
+    padding: 30px 25px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  .admin-welcome-section h1 {
+    font-size: 34px;
+  }
+
+  .admin-welcome-section p {
+    font-size: 16px;
+  }
+
+  .admin-card p {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    gap: 30px;
+  .admin-home-container {
+    padding: 30px 20px;
+    gap: 40px;
   }
-  .card {
-    width: 90%;
-    height: 200px;
+
+  .admin-welcome-section h1 {
+    font-size: 28px;
+  }
+
+  .admin-card p {
+    font-size: 24px;
+  }
+
+  .admin-actions h2 {
+    font-size: 22px;
+  }
+
+  .action-buttons button {
+    font-size: 16px;
+    padding: 15px 20px;
   }
 }

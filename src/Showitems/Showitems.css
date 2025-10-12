@@ -1,94 +1,125 @@
-/* Container */
 .showitems-container {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  overflow-x: auto; /* for small screens */
+  background: #f4f4f9; /* soft page background */
+  padding: 40px 60px;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* Table */
 .showitems-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #fff;
+  background: #fff; /* table background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* Table Header */
-.showitems-table thead {
-  background: #f5f6fa;
+.showitems-table th, .showitems-table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 15px;
+  color: #333;
 }
 
 .showitems-table th {
-  padding: 12px;
-  text-align: left;
-  font-size: 15px;
+  background: #182848; /* table header dark background */
+  color: #fff;
   font-weight: 600;
-  color: #333;
-  border-bottom: 2px solid #ddd;
 }
 
-/* Table Rows */
-.showitems-table td {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  color: #555;
-  vertical-align: middle;
-}
-
-/* Description column - one line only */
-.showitems-table .description {
-  max-width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Images */
-.showitems-table img {
+.showitems-table td img {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-/* Buttons */
+.showitems-table .description {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.showitems-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.showitems-table tr:hover {
+  background: #e0e0ff;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
 .showitems-table button {
-  padding: 6px 12px;
-  margin: 0 5px;
-  font-size: 13px;
+  padding: 8px 14px;
+  margin-right: 8px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-/* Delete button */
 .showitems-table button:first-child {
-  background: #ff4d4d;
+  background: #ff4d4f; /* delete button red */
   color: #fff;
 }
 
 .showitems-table button:first-child:hover {
-  background: #e60000;
+  background: #e03e3e;
 }
 
-/* Update button */
 .showitems-table button:last-child {
-  background: #007bff;
+  background: #4caf50; /* update button green */
   color: #fff;
 }
 
 .showitems-table button:last-child:hover {
-  background: #0056b3;
+  background: #3d8b3d;
 }
 
-/* Row hover effect */
-.showitems-table tbody tr:hover {
-  background-color: #f9fbfd;
+/* Snackbar overrides */
+.MuiSnackbar-root {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .showitems-container {
+    padding: 30px 40px;
+  }
+
+  .showitems-table th, .showitems-table td {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .showitems-table td img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .showitems-container {
+    padding: 20px;
+  }
+
+  .showitems-table {
+    font-size: 13px;
+  }
+
+  .showitems-table td img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .showitems-table .description {
+    max-width: 150px;
+  }
 }

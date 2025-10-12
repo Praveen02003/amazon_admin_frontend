@@ -4,6 +4,7 @@ import { loginuser } from '../Functions/Logindata'
 import { useNavigate } from 'react-router-dom'
 import { Snackbar, Alert, Button } from "@mui/material";
 import '../Login/Login.css'
+import { restrictuser } from '../Functions/Restrictuser';
 export const Login = () => {
     const {
         loginmail,
@@ -21,9 +22,7 @@ export const Login = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (localStorage.getItem('Admintoken')) {
-            navigate('/home')
-        }
+        restrictuser(navigate)
     }, [])
 
     return (
@@ -49,7 +48,7 @@ export const Login = () => {
             </div>
             <Snackbar
                 open={open}
-                autoHideDuration={1000}
+                autoHideDuration={500}
                 onClose={() => setOpen(false)}
                 anchorOrigin={{ vertical: "top", horizontal: "right" }}
             >

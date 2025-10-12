@@ -4,24 +4,19 @@ import axios from "../Axios/Axios.js";
 import { getorders } from "../Functions/Getorders.js";
 import '../Orders/Orders.css'
 import { useNavigate } from "react-router-dom";
+import { restrictpage } from "../Functions/Restrictuser.js";
 export const Orders = () => {
   const {
     getorderedemail,
     setGetorderedemail
   } = useContext(Mycontext);
-  
-  const navigate=useNavigate()
-  
-  useEffect(()=>{
-      if (!localStorage.getItem('Admintoken'))
-      {
-        navigate('/')
-      }
-      else
-      {
-        getorders(setGetorderedemail);
-      }
-  },[])
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    restrictpage(navigate)
+    getorders(setGetorderedemail);
+  }, [])
   return (
     <div className="orders-container">
       <h1 className="orders-title">Orders</h1>

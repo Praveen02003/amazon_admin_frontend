@@ -5,14 +5,39 @@ import { useNavigate } from "react-router-dom";
 import { logout } from "../Functions/Logout";
 
 export const Header = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   return (
-    <div className="header">
-      <img src={amazonlogo} alt="logo" className="logo-image" />
-      <h2 className="logo-text">Amazon</h2>
-      <div className="nav-links">
-        {localStorage.getItem('Admintoken') ? <h2 onClick={()=>{logout(navigate)}}>Logout</h2> : ''}
+    <div className="admin-header">
+      <div className="admin-header-left" onClick={()=>{navigate("/home")}}>
+        <img src={amazonlogo} alt="Amazon Admin" className="admin-logo" />
+        <h2 className="admin-title">Amazon Admin Panel</h2>
+      </div>
+
+
+      {localStorage.getItem('Admintoken') && (
+        <div className="admin-nav">
+          <ul>
+            <li onClick={() => { navigate('/home') }}>Dashboard</li>
+            <li onClick={() => { navigate('/showitems') }}>Products</li>
+            <li onClick={() => { navigate('/orders') }}>Orders</li>
+          </ul>
+        </div>
+      )}
+
+
+      <div className="admin-header-right">
+        <div className="admin-profile">
+          <i className="fa-solid fa-user-shield"></i>
+          {localStorage.getItem('Admintoken') && (
+            <span>Admin</span>
+          )}
+        </div>
+        {localStorage.getItem('Admintoken') ? (
+          <button onClick={() => logout(navigate)}>Logout</button>
+        ) : (<button onClick={() => navigate('/')}>Login</button>) }
       </div>
     </div>
+
+
   );
 };

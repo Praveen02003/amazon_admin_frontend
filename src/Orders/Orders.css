@@ -1,120 +1,103 @@
-/* Container */
+/* ===== Main Container ===== */
 .orders-container {
-  max-width: 1200px;
-  margin: 40px auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333; /* dark text on white */
-  background-color: #f2efef; /* page background */
-  padding: 20px;
-  border-radius: 10px;
+  background: #f7f8fc; /* soft background for admin panel */
+  min-height: 100vh;
+  padding: 50px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-
+/* ===== Page Heading ===== */
 .orders-title {
-  font-size: 2.5rem;           /* big and prominent */
-  color: #000306;              /* blue accent to match cards */
-  text-align: center;          /* center of the page */
-  margin-bottom: 30px;         /* spacing from cards */
-  font-weight: 700;            /* bold */
-  text-transform: uppercase;   /* all caps */
-  letter-spacing: 2px;         /* spaced letters for elegance */
-  transition: transform 0.3s ease;
+  font-size: 36px;
+  font-weight: 700;
+  color: #182848;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff9900;
+  padding-bottom: 8px;
 }
 
-.orders-title:hover {
-  transform: scale(1.05);      /* subtle zoom on hover */
-}
-
-/* Card for each order */
+/* ===== Individual Order Card ===== */
 .order-card {
-  background: #ffffff; /* white card */
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.order-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Order header */
+/* ===== Order Header ===== */
 .order-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-}
-
-.order-header h2 {
-  font-size: 1.3rem;
-  color: #021122; /* blue email */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
 .order-header .total {
-  font-size: 1.1rem;
-  background: #e0f0ff;
-  padding: 5px 15px;
-  border-radius: 20px;
-  color: #021122;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  color: #182848;
 }
 
-/* Table styling */
+/* ===== Order Table ===== */
 .order-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  font-size: 0.95rem;
 }
 
 .order-table th,
 .order-table td {
   padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
 }
 
 .order-table th {
-  background-color: #f0f0f0;
-  color: #021122;
-  text-transform: uppercase;
+  background-color: #f2f4f7;
+  font-weight: 600;
+  color: #182848;
 }
 
-.order-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.order-table tr:hover {
-  background-color: #e6f2ff;
-}
-
-.order-table img {
-  width: 70px;
-  height: auto;
+.order-table td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
-.order-table img:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .order-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .orders-container {
+    padding: 40px 50px;
   }
-
-  .order-table th, .order-table td {
-    padding: 10px 8px;
+  .order-table th,
+  .order-table td {
+    font-size: 14px;
+    padding: 10px 12px;
   }
-
-  .order-table img {
+  .order-table td img {
     width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 30px 20px;
+  }
+  .order-card {
+    padding: 20px;
+  }
+  .orders-title {
+    font-size: 28px;
   }
 }

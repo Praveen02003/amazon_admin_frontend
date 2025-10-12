@@ -45,7 +45,7 @@ export const updateitem = async (navigate, count, setCount, updateimage, setUpda
                 setCount(count + 1)
                 setTimeout(() => {
                     navigate('/showitems')
-                }, 1000);
+                }, 500);
                 
             }
             else {

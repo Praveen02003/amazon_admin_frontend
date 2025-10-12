@@ -1,109 +1,139 @@
+/* ===== Main Container ===== */
 .additems-container {
-  max-width: 500px;
-  margin: 30px auto;
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-
-.additems-title {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.category-label {
+  background: #f7f8fc;
+  min-height: 100vh;
+  padding: 50px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #222;
   display: flex;
   flex-direction: column;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 20px;
+  gap: 30px;
 }
 
-.category-select {
-  margin-top: 5px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid black;
-  background-color: #f9f9f9;
+/* ===== Heading ===== */
+.additems-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #182848;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ff9900;
+  padding-bottom: 8px;
+}
+
+/* ===== Two-column layout ===== */
+.additems-content {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ===== Image Section ===== */
+.additems-image-section {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.additems-preview {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #ccc;
+}
+
+/* ===== Form Section ===== */
+.additems-form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Labels & Inputs ===== */
+.additems-label {
+  font-weight: 500;
   font-size: 16px;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.additems-input {
+  padding: 12px 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
   transition: all 0.3s ease;
 }
 
-.category-select:hover {
-  border-color: black;
+.additems-input:focus {
+  border-color: #4b6cb7;
+  box-shadow: 0 0 10px rgba(75, 108, 183, 0.2);
 }
 
-.category-select:focus {
+.additems-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== Select ===== */
+.category-select {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   outline: none;
-  border-color: black; /* nice green focus */
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-  background-color: #fff;
 }
 
-.additems-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 5px;
-  font-size: 14px;
-  resize: vertical; /* user can drag to resize vertically */
-}
-
-
-.additems-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.additems-form label {
-  font-weight: 500;
-  color: #444;
-}
-
-.additems-form input[type="text"],
-.additems-form input[type="number"],
-.additems-form input[type="file"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.additems-form input::placeholder,
-.additems-form textarea::placeholder {
-  color: #888;
-  font-style: italic;
-}
-
-
-.additems-preview {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-}
-
+/* ===== Add Button ===== */
 .additems-button {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  font-weight: 600;
+  padding: 15px 25px;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 
 .additems-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #3a55a0, #101f3f);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .additems-content {
+    gap: 30px;
+  }
+  .additems-preview {
+    max-width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .additems-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .additems-preview {
+    max-width: 100%;
+    height: 180px;
+  }
 }

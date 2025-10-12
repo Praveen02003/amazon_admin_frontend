@@ -10,34 +10,42 @@ import { Footer } from './Footer/Footer.js';
 import { createContext, useState } from 'react';
 import { Update } from './Update/Update.js';
 import { Login } from './Login/Login.js';
+import { About } from './About/About.js';
+import { Contact } from './Contact/Contact.js';
+import { Policies } from './Policies/Policies.js';
 export const Mycontext = createContext()
 function App() {
-  const[showallitems,setShowallitems]=useState([])
-  const[getorderedemail,setGetorderedemail]=useState([])
-  const[getorderedcartitems,setGetorderedcartitems]=useState([])
-  const[count,setCount]=useState(0)
-  const[updateid,setUpdateid]=useState("")
-  const[updateimage,setUpdateimage]=useState("")
-  const[updatetitle,setUpdatetitle]=useState("")
-  const[updatediscription,setUpdatediscription]=useState("")
-  const[updateprice,setUpdateprice]=useState(0)
-  const[updatedefaultprice,setUpdatedefaultprice]=useState(0)
-  const[updateoffer,setUpdateoffer]=useState(0)
-  const[loginmail,setLoginmail]=useState("")
-  const[loginpassword,setLoginpassword]=useState("")
-  const[addimage,setAddimage]=useState("")
-  const[addtitle,setAddtitle]=useState("")
-  const[adddiscription,setAdddiscription]=useState("")
-  const[addprice,setAddprice]=useState(0)
-  const[adddefaultprice,setAdddefaultprice]=useState(0)
-  const[addoffer,setAddeoffer]=useState(0)
-  const[categories,setCategories]=useState("")
-  const[open,setOpen]=useState(false)
-  const[severity,setSeverity]=useState("")
-  const[loginmessage,setLoginmessage]=useState("")
-  const[addmessage,setAddmessage]=useState("")
-  const[updatemessage,setUpdatemessage]=useState("")
-  const[deletemessage,setDeletemessage]=useState("")
+  const [showallitems, setShowallitems] = useState([])
+  const [getorderedemail, setGetorderedemail] = useState([])
+  const [getorderedcartitems, setGetorderedcartitems] = useState([])
+  const [count, setCount] = useState(0)
+  const [updateid, setUpdateid] = useState("")
+  const [updateimage, setUpdateimage] = useState("")
+  const [updatetitle, setUpdatetitle] = useState("")
+  const [updatediscription, setUpdatediscription] = useState("")
+  const [updateprice, setUpdateprice] = useState(0)
+  const [updatedefaultprice, setUpdatedefaultprice] = useState(0)
+  const [updateoffer, setUpdateoffer] = useState(0)
+  const [loginmail, setLoginmail] = useState("")
+  const [loginpassword, setLoginpassword] = useState("")
+  const [addimage, setAddimage] = useState("")
+  const [addtitle, setAddtitle] = useState("")
+  const [adddiscription, setAdddiscription] = useState("")
+  const [addprice, setAddprice] = useState(0)
+  const [adddefaultprice, setAdddefaultprice] = useState(0)
+  const [addoffer, setAddeoffer] = useState(0)
+  const [categories, setCategories] = useState("")
+  const [open, setOpen] = useState(false)
+  const [severity, setSeverity] = useState("")
+  const [loginmessage, setLoginmessage] = useState("")
+  const [addmessage, setAddmessage] = useState("")
+  const [updatemessage, setUpdatemessage] = useState("")
+  const [deletemessage, setDeletemessage] = useState("")
+
+  const [totalproducts, setTotalproducts] = useState(0)
+  const [totalorders, setTotalorders] = useState(0)
+  const [totalcustomers, setTotalcustomers] = useState(0)
+  const [totalrevenue, setTotalrevenue] = useState(0)
   return (
     <Mycontext.Provider value={{
       showallitems,
@@ -91,7 +99,15 @@ function App() {
       updatemessage,
       setUpdatemessage,
       deletemessage,
-      setDeletemessage
+      setDeletemessage,
+      totalproducts,
+      setTotalproducts,
+      totalorders,
+      setTotalorders,
+      totalcustomers,
+      setTotalcustomers,
+      totalrevenue,
+      setTotalrevenue
     }}>
       <Router>
         <Header />
@@ -103,6 +119,9 @@ function App() {
           <Route path='/showitems' element={<Showitems />} />
           <Route path='/update' element={<Update />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/policies' element={<Policies />} />
         </Routes>
         <Footer />
       </Router>

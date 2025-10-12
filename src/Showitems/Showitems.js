@@ -7,6 +7,7 @@ import { deletedata } from '../Functions/Deletedata.js'
 import { useNavigate } from 'react-router-dom'
 import { updatestatedata } from '../Functions/Updatestate.js'
 import { Snackbar, Alert, Button } from "@mui/material";
+import { restrictpage } from '../Functions/Restrictuser.js'
 export const Showitems = () => {
   const {
     showallitems,
@@ -39,16 +40,18 @@ export const Showitems = () => {
 
   const navigate = useNavigate()
   useEffect(() => {
-    if (!localStorage.getItem('Admintoken')) {
-      navigate('/')
-    }
-    else {
-      fetchallitems(setShowallitems)
-    }
+    restrictpage(navigate)
+    fetchallitems(setShowallitems)
   }, [count])
 
   return (
     <div className="showitems-container">
+      {/* ===== Page Heading ===== */}
+      <div className="products-heading">
+        <h1>Manage Products</h1>
+        <p>View, update, or delete items from your Mini Amazon store efficiently.</p>
+      </div>
+
       <table className="showitems-table">
         <thead>
           <tr>
@@ -70,22 +73,27 @@ export const Showitems = () => {
               <td>{item.offer}% Off</td>
               <td>{item.defaultprice}rs</td>
               <td>{item.price}rs</td>
-              <td><button onClick={() => { deletedata(item, count, setCount,setOpen,setDeletemessage,setSeverity) }}>Delete</button> <button onClick={() => { updatestatedata(item, navigate, count, setCount, updateimage, setUpdateimage, updatetitle, setUpdatetitle, updatediscription, setUpdatediscription, updateprice, setUpdateprice, updatedefaultprice, setUpdatedefaultprice, updateoffer, setUpdateoffer, updateid, setUpdateid) }}>Update</button> </td>
+              <td>
+                <button onClick={() => { deletedata(item, count, setCount, setOpen, setDeletemessage, setSeverity) }}>Delete</button>
+                <button onClick={() => { updatestatedata(item, navigate, count, setCount, updateimage, setUpdateimage, updatetitle, setUpdatetitle, updatediscription, setUpdatediscription, updateprice, setUpdateprice, updatedefaultprice, setUpdatedefaultprice, updateoffer, setUpdateoffer, updateid, setUpdateid) }}>Update</button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+
       <Snackbar
         open={open}
-        autoHideDuration={1000}
+        autoHideDuration={300}
         onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
       >
         <Alert severity={severity} onClose={() => setOpen(false)}>
           {deletemessage}
         </Alert>
       </Snackbar>
     </div>
+
 
   )
 }

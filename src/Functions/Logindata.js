@@ -17,7 +17,7 @@ export const loginuser = (loginmail, loginpassword, navigate, setOpen, setSeveri
                 localStorage.setItem('Admintoken', 'set')
                 setTimeout(() => {
                     navigate('/home')
-                }, 1000);
+                }, 500);
             }
             else {
                 // alert("Please enter correct data")

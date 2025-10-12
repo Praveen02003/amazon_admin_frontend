@@ -1,43 +1,104 @@
-.header {
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1b2735, #090a0f);
+  padding: 15px 40px;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-header-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: linear-gradient(90deg, #131921, #232f3e); /* colorful gradient */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.logo-image {
-  width: 70px;
-  height: auto;
-  margin-right: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.logo-text {
-  font-size: 32px;
-  font-weight: bold;
-  color: #ff9900;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-  margin: 0;
-}
-
-.nav-links h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 15px;
-  color: #ff9900;
+  gap: 12px;
   cursor: pointer;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  background: rgba(255,255,255,0.1);
 }
 
-.nav-links h2:hover {
-  color: #ff9900;
-  background: rgba(255,255,255,0.1);
-  transform: scale(1.1);
+.admin-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #ff9900);
+}
+
+.admin-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff9900, #ffcc66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.admin-nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.admin-nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff9900;
+  transition: width 0.3s ease;
+}
+
+.admin-nav ul li:hover::after {
+  width: 100%;
+}
+
+.admin-nav ul li:hover {
+  color: #ffcc66;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.admin-profile i {
+  color: #ffcc66;
+  font-size: 18px;
+}
+
+.admin-header-right button {
+  background: linear-gradient(90deg, #ff9900, #ff6600);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-header-right button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffb84d, #ff6600);
+  box-shadow: 0 0 8px #ff9900;
 }

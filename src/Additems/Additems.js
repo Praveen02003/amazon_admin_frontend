@@ -43,83 +43,98 @@ export const Additems = () => {
 
   return (
     <div className="additems-container">
-      <h1 className="additems-title">Add Items</h1>
+      <h1 className="additems-title">Add New Product</h1>
 
-      <div className="additems-form">
-        <label>
-          Image :
-          <input
-            type="file"
-            onChange={(event) => handleaddimagefile(event, setAddimage)}
-          />
-        </label>
+      <div className="additems-content">
+        {/* Left Column: Image Upload */}
+        <div className="additems-image-section">
+          <label className="additems-label">
+            Product Image:
+            <input
+              type="file"
+              onChange={(event) => handleaddimagefile(event, setAddimage)}
+              className="additems-input"
+            />
+          </label>
 
-        {addimage && (
-          <img
-            src={addimage}
-            alt="Preview"
-            className="additems-preview"
-          />
-        )}
+          {addimage && (
+            <img
+              src={addimage}
+              alt="Preview"
+              className="additems-preview"
+            />
+          )}
+        </div>
 
-        <label>
-          Title :
-          <input
-            type="text"
-            placeholder="Enter item title"
-            onChange={(event) => setAddtitle(event.target.value)}
-          />
-        </label>
+        {/* Right Column: Form Inputs */}
+        <div className="additems-form">
+          <label className="additems-label">
+            Title:
+            <input
+              type="text"
+              placeholder="Enter item title"
+              onChange={(event) => setAddtitle(event.target.value)}
+              className="additems-input"
+            />
+          </label>
 
-        <label>
-          Description :
-          <textarea
-            rows="4"
-            placeholder="Enter item description"
-            onChange={(event) => setAdddiscription(event.target.value)}
-          />
-        </label>
+          <label className="additems-label">
+            Description:
+            <textarea
+              rows="4"
+              placeholder="Enter item description"
+              onChange={(event) => setAdddiscription(event.target.value)}
+              className="additems-input additems-textarea"
+            />
+          </label>
 
-        <label>
-          Price :
-          <input
-            type="number"
-            placeholder="Enter item price"
-            onChange={(event) => setAddprice(event.target.value)}
-          />
-        </label>
+          <label className="additems-label">
+            Price:
+            <input
+              type="number"
+              placeholder="Enter item price"
+              onChange={(event) => setAddprice(event.target.value)}
+              className="additems-input"
+            />
+          </label>
 
-        <label>
-          Offer :
-          <input
-            type="number"
-            placeholder="Enter discount/offer %"
-            onChange={(event) => setAddeoffer(event.target.value)}
-          />
-        </label>
+          <label className="additems-label">
+            Offer (%):
+            <input
+              type="number"
+              placeholder="Enter discount/offer %"
+              onChange={(event) => setAddeoffer(event.target.value)}
+              className="additems-input"
+            />
+          </label>
 
-        <label className="category-label">
-          Category:
-          <select
-            className="category-select"
-            onChange={(event) => setCategories(event.target.value)}
+          <label className="additems-label">
+            Category:
+            <select
+              className="category-select"
+              onChange={(event) => setCategories(event.target.value)}
+            >
+              <option value="">Select Option</option>
+              <option value="laptops">Laptops</option>
+              <option value="chargers">Chargers</option>
+              <option value="earpods">Earpods</option>
+              <option value="hometheatres">Home Theatres</option>
+              <option value="keyboards">Keyboards</option>
+              <option value="mobiles">Mobiles</option>
+              <option value="mouses">Mouses</option>
+              <option value="tvs">TVs</option>
+            </select>
+          </label>
+
+          <button
+            className="additems-button"
+            onClick={() => additemsdata(setOpen, setSeverity, setAddmessage, categories, addimage, addtitle, adddiscription, addprice, addoffer)}
           >
-            <option value="">Select Option</option>
-            <option value="laptops">Laptops</option>
-            <option value="chargers">Chargers</option>
-            <option value="earpods">Earpods</option>
-            <option value="hometheatres">Home Theatres</option>
-            <option value="keyboards">Keyboards</option>
-            <option value="mobiles">Mobiles</option>
-            <option value="mouses">Mouses</option>
-            <option value="tvs">TVs</option>
-          </select>
-        </label>
-
-
-
-        <button className="additems-button" onClick={() => { additemsdata(setOpen, setSeverity, setAddmessage, categories, addimage, addtitle, adddiscription, addprice, addoffer) }}>Add</button>
+            Add Product
+          </button>
+        </div>
       </div>
+
       <Snackbar
         open={open}
         autoHideDuration={1000}
@@ -131,5 +146,6 @@ export const Additems = () => {
         </Alert>
       </Snackbar>
     </div>
+
   )
 }
