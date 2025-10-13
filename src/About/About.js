@@ -10,7 +10,7 @@ export const About = () => {
                 <div className="about-card">
                     <h2>Purpose</h2>
                     <p>
-                        This admin panel allows you to manage the Mini Amazon store efficiently.
+                        This admin panel allows you to manage the <b>Smartcart</b> store efficiently.
                         Track products, update inventory, manage orders, and analyze revenue all in one place.
                     </p>
                 </div>
@@ -31,7 +31,7 @@ export const About = () => {
                 <div className="about-card">
                     <h2>Developer</h2>
                     <p>
-                        Developed by <strong>J Praveen</strong>.
+                        Developed by <strong>Praveen Jayaprakash</strong>.
                         Built with <strong>React, Node.js, Express, and MongoDB</strong>.
                         Designed for educational and demonstration purposes.
                     </p>
@@ -40,9 +40,8 @@ export const About = () => {
                 {/* Contact Info Card */}
                 <div className="about-card">
                     <h2>Contact</h2>
-                    <p>Email: <a href="mailto:praveen@example.com">praveen@example.com</a></p>
-                    <p>GitHub: <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer">github.com/yourgithub</a></p>
-                    <p>Website: <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">yourwebsite.com</a></p>
+                    <p>Email: <a href="mailto:support@smartcart.com">support@smartcart.com</a></p>
+                    <p>Website: <a href="https://smartcart.com" target="_blank" rel="noreferrer">smartcart.com</a></p>
                 </div>
             </div>
         </div>

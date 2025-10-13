@@ -8,7 +8,7 @@ export const Footer = () => {
     <div className="admin-footer">
       <div className="footer-wrapper">
         <div className="footer-section footer-brand">
-          <h2>Amazon Admin Panel</h2>
+          <h2>Smartcart Admin Panel</h2>
           <p>Powerful tools to manage products, orders, and users — all in one place.</p>
         </div>
 
@@ -24,7 +24,7 @@ export const Footer = () => {
 
         <div className="footer-section footer-contact">
           <h3>Support</h3>
-          <p>Email: <a href="mailto:support@amazonadmin.com">support@amazonadmin.com</a></p>
+          <p>Email: <a href="mailto:support@amazonadmin.com">support@smartcartadmin.com</a></p>
           <p>Helpline: +91 98765 43210</p>
           <div className="footer-socials">
             <i className="fa-brands fa-github"></i>
@@ -35,8 +35,8 @@ export const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Amazon Admin Panel. All rights reserved.</p>
-        <p>Developed by <span className="footer-dev">J Praveen</span></p>
+        <p>© {new Date().getFullYear()} Smartcart All rights reserved.</p>
+        <p>Developed by <span className="footer-dev">Praveen Jayaprakash</span> </p>
       </div>
     </div>
 

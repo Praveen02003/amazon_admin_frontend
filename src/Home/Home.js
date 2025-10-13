@@ -31,7 +31,7 @@ export const Home = () => {
     <div className="admin-home-container">
       <div className="admin-welcome-section">
         <h1>Welcome Back, Admin</h1>
-        <p>Manage your Mini Amazon store efficiently — track products, add new items, and manage orders with ease.</p>
+        <p>Manage your <b>Smartcart</b> store efficiently — track products, add new items, and manage orders with ease.</p>
       </div>
 
       {/* ======= Dashboard Stats ======= */}

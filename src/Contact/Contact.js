@@ -9,16 +9,14 @@ export const Contact = () => {
                 {/* Left: Contact Info */}
                 <div className="contact-info">
                     <h2>Get in Touch</h2>
-                    <p>If you have any questions or feedback about the Mini Amazon Admin Panel, feel free to reach out.</p>
+                    <p>If you have any questions or feedback about the <b>Smartcart</b> Admin Panel, feel free to reach out.</p>
 
                     <div className="info-item">
-                        <strong>Email:</strong> <a href="mailto:praveen@example.com">praveen@example.com</a>
+                        <strong>Email:</strong> <a href="mailto:support@smartcart.com">support@smartcart.com</a>
                     </div>
+                    
                     <div className="info-item">
-                        <strong>GitHub:</strong> <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer">github.com/yourgithub</a>
-                    </div>
-                    <div className="info-item">
-                        <strong>Website:</strong> <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">yourwebsite.com</a>
+                        <strong>Website:</strong> <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">smartcart.com</a>
                     </div>
                 </div>
 

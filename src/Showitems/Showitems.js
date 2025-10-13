@@ -49,7 +49,7 @@ export const Showitems = () => {
       {/* ===== Page Heading ===== */}
       <div className="products-heading">
         <h1>Manage Products</h1>
-        <p>View, update, or delete items from your Mini Amazon store efficiently.</p>
+        <p>View, update, or delete items from your <b>Smartcart</b> store efficiently.</p>
       </div>
 
       <table className="showitems-table">

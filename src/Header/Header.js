@@ -10,7 +10,7 @@ export const Header = () => {
     <div className="admin-header">
       <div className="admin-header-left" onClick={()=>{navigate("/home")}}>
         <img src={amazonlogo} alt="Amazon Admin" className="admin-logo" />
-        <h2 className="admin-title">Amazon Admin Panel</h2>
+        <h2 className="admin-title">Smartcart Admin Panel</h2>
       </div>
 
 
