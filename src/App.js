@@ -42,10 +42,10 @@ function App() {
   const [updatemessage, setUpdatemessage] = useState("")
   const [deletemessage, setDeletemessage] = useState("")
 
-  const [totalproducts, setTotalproducts] = useState(0)
-  const [totalorders, setTotalorders] = useState(0)
-  const [totalcustomers, setTotalcustomers] = useState(0)
-  const [totalrevenue, setTotalrevenue] = useState(0)
+  const [totalproducts, setTotalproducts] = useState(null)
+  const [totalorders, setTotalorders] = useState(null)
+  const [totalcustomers, setTotalcustomers] = useState(null)
+  const [totalrevenue, setTotalrevenue] = useState(null)
   return (
     <Mycontext.Provider value={{
       showallitems,

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { updatestatedata } from '../Functions/Updatestate.js'
 import { Snackbar, Alert, Button } from "@mui/material";
 import { restrictpage } from '../Functions/Restrictuser.js'
+import { loader } from '../Loader/Loader.js'
 export const Showitems = () => {
   const {
     showallitems,
@@ -65,7 +66,7 @@ export const Showitems = () => {
           </tr>
         </thead>
         <tbody>
-          {showallitems.map((item, index) => (
+          {showallitems.length > 0 ? showallitems.map((item, index) => (
             <tr key={index}>
               <td><img src={item.image} alt={item.title} /></td>
               <td>{item.title}</td>
@@ -78,7 +79,7 @@ export const Showitems = () => {
                 <button onClick={() => { updatestatedata(item, navigate, count, setCount, updateimage, setUpdateimage, updatetitle, setUpdatetitle, updatediscription, setUpdatediscription, updateprice, setUpdateprice, updatedefaultprice, setUpdatedefaultprice, updateoffer, setUpdateoffer, updateid, setUpdateid) }}>Update</button>
               </td>
             </tr>
-          ))}
+          )) : loader()}
         </tbody>
       </table>
 

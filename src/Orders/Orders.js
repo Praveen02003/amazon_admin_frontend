@@ -20,7 +20,7 @@ export const Orders = () => {
   return (
     <div className="orders-container">
       <h1 className="orders-title">Orders</h1>
-      {getorderedemail.map((order, index) => (
+      {getorderedemail.length > 0 ? getorderedemail.map((order, index) => (
         <div key={index} className="order-card">
           <div className="order-header">
             <h2 className="total">{order.email}</h2>
@@ -50,7 +50,7 @@ export const Orders = () => {
             </tbody>
           </table>
         </div>
-      ))}
+      )) : <p>No orders available</p>}
     </div>
   );
 };

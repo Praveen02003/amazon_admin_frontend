@@ -7,6 +7,7 @@ import { gettotalorders } from '../Functions/Gettotalorders';
 import { gettotalcustomers } from '../Functions/Gettotalcustomers';
 import { gettotalrevenue } from '../Functions/Gettotalrevenue';
 import { restrictpage } from '../Functions/Restrictuser';
+import { loader } from '../Loader/Loader';
 
 export const Home = () => {
   const {
@@ -38,22 +39,22 @@ export const Home = () => {
       <div className="admin-stats-container">
         <div className="admin-card">
           <h2>Total Products</h2>
-          <p>{totalproducts}</p>
+          <p>{totalproducts === null ? loader() : totalproducts}</p>
         </div>
 
         <div className="admin-card">
           <h2>Total Orders</h2>
-          <p>{totalorders}</p>
+          <p>{totalorders === null ? loader() : totalorders}</p>
         </div>
 
         <div className="admin-card">
           <h2>Total Customers</h2>
-          <p>{totalcustomers}</p>
+          <p>{totalcustomers === null ? loader() : totalcustomers}</p>
         </div>
 
         <div className="admin-card">
           <h2>Total Revenue</h2>
-          <p>₹{totalrevenue}</p>
+          <p>₹{totalrevenue === null ? loader() : totalrevenue }</p>
         </div>
       </div>
 
