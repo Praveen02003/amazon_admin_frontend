@@ -35,7 +35,7 @@ export const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Smartcart All rights reserved.</p>
+        <p> Version : 0.1 | © {new Date().getFullYear()} Smartcart All rights reserved.</p>
         <p>Developed by <span className="footer-dev">Praveen Jayaprakash</span> </p>
       </div>
     </div>
